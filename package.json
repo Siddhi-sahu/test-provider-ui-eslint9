@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "the service mesh management plane",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "node ui_dev_server.js",
     "build": "npm run clean && next build",
     "start": "NODE_ENV=production node server.js",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "clean": "rm -rf .next,out"
   },
   "keywords": [],
@@ -33,6 +34,7 @@
   "devDependencies": {
     "eslint": "^9.32.0",
     "eslint-config-next": "^15.3.4",
+    "eslint-plugin-react": "^7.37.5",
     "start-server-and-test": "^2.0.11"
   },
   "engines": {
